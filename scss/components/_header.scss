@@ -1,0 +1,42 @@
+@import '../mixins';
+@import '../variables';
+.top-header{
+    @include flex-row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $background-color;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    padding: 2rem;
+    .logo a{
+        @include text(2rem);
+        font-weight: bold;
+        text-decoration: none;
+        color: $main-text-green;
+    }
+    .nav-menu{
+        @include flex-row;
+        a{
+            @include text;
+            text-decoration: none;
+            margin-right: 1rem;
+            &::after{
+                content: "";
+                display: block;
+                transition: all 0.5s;   
+                width: 0;
+                height: 2px;
+            }
+            &:hover::after{
+                width:100%;
+                background: $main-text-green;
+                @include text(1rem, $main-text-green)
+            }
+            
+        }
+        .active{
+            color: $main-text-green;
+        }   
+    }
+}

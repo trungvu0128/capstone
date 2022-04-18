@@ -1,1 +1,179 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.top-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #151515;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  padding: 2rem;
+}
+
+.top-header .logo a {
+  font-size: 2rem;
+  color: #ddd;
+  font-weight: bold;
+  text-decoration: none;
+  color: #189a46;
+}
+
+.top-header .nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.top-header .nav-menu a {
+  font-size: 1rem;
+  color: #ddd;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.top-header .nav-menu a::after {
+  content: "";
+  display: block;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  width: 0;
+  height: 2px;
+}
+
+.top-header .nav-menu a:hover::after {
+  width: 100%;
+  background: #189a46;
+  font-size: 1rem;
+  color: #189a46;
+}
+
+.top-header .nav-menu .active {
+  color: #189a46;
+}
+
+.button {
+  width: 10rem;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.button.button-bg-white {
+  background-color: #ffffff;
+  color: #189a46;
+  border: 2px solid transparent;
+}
+
+.button.button-bg-trans {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.main-carousel {
+  position: relative;
+}
+
+.main-carousel .carousel-inner .item {
+  width: 100%;
+  height: 95vh;
+  background-image: url("../../img/banner1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-carousel .carousel-inner .item .carousel-content {
+  font-size: 1rem;
+  color: #ddd;
+  position: absolute;
+  width: 40%;
+  top: 50%;
+  left: 0%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  z-index: 10;
+  margin-left: 10rem;
+}
+
+.main-carousel .carousel-inner .item .carousel-content .carousel-group-button {
+  margin-top: 3rem;
+}
+
+.main-carousel .carousel-inner .item-2 {
+  width: 100%;
+  height: 95vh;
+  background-image: url("../../img/banner2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-carousel .carousel-inner .item-2 .carousel-content {
+  font-size: 1rem;
+  color: #ddd;
+  position: absolute;
+  width: 40%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  z-index: 10;
+  margin-right: 10rem;
+}
+
+.main-carousel .carousel-inner .item-2 .carousel-content .carousel-group-button {
+  margin-top: 3rem;
+}
+
+.main-carousel .carousel-inner .item-3 {
+  width: 100%;
+  height: 95vh;
+  background-image: url("../../img/banner3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-carousel .carousel-inner .item-3 .carousel-content {
+  font-size: 1rem;
+  color: #ddd;
+  position: absolute;
+  width: 40%;
+  top: 50%;
+  left: 0%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  z-index: 10;
+  margin-left: 10rem;
+}
+
+.main-carousel .carousel-inner .item-3 .carousel-content .carousel-group-button {
+  margin-top: 3rem;
+}
+
+.main-carousel .carousel-inner h1 {
+  font-size: 5rem;
+  color: #ddd;
+}
+/*# sourceMappingURL=style.css.map */

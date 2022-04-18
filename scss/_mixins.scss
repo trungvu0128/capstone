@@ -1,0 +1,40 @@
+@import './_variables';
+
+@mixin flex-column() {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row() {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin button($background-color, $color) {
+    background-color: $background-color;
+    color: $color;
+}
+
+@mixin text($font-size: 1rem, $color:#ddd) {
+    font-size: $font-size;
+    color: $color;
+}
+
+@mixin carousel($height, $imageUrl) {
+    width: 100%;
+    height: $height;
+    background-image: url($imageUrl);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin carousel-content($p-left, $p-top, $tf-X, $tf-Y) {
+    @include text;
+    position: absolute;
+    width: 40%;
+    top: $p-top;
+    left: $p-left;
+    transform: translate($tf-X, $tf-Y);
+    z-index: 10;
+}
