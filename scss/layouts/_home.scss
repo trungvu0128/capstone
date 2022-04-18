@@ -1,41 +1,43 @@
 @import '../mixins';
 @import '../variables';
-.main-carousel{
+
+.main-carousel {
     position: relative;
-    .carousel-inner{
-        .item{
-            @include carousel(95vh, '../../img/banner1.jpg');
-            .carousel-content{
-                @include carousel-content(0%, 50%, 0%, -50%);
-                margin-left: 10rem;
-                .carousel-group-button{
-                    margin-top: 3rem;
-                }
-            }
-        }
-        .item-2{
-            @include carousel(95vh, '../../img/banner2.jpg');
-            .carousel-content{
-                @include carousel-content(50%, 50%, 0%, -50%);
-                margin-right: 10rem;
-                .carousel-group-button{
-                    margin-top: 3rem;
-                }
-            }
-        }
-        .item-3{
-            @include carousel(95vh, '../../img/banner3.jpg');
-            .carousel-content{
-                @include carousel-content(0%, 50%, -0%, -50%);
-                margin-left: 10rem;
-                .carousel-group-button{
-                    margin-top: 3rem;
-                }
-            }
-        }
-        h1{
+
+    .carousel-inner {
+        h1 {
             @include text(5rem);
         }
-        
+
+        .carousel-group-button {
+            margin-top: 3rem;
+        }
+
+        .item {
+            @include carousel(95vh, '../../img/banner1.jpg');
+
+            .carousel-content {
+                @include carousel-content(0%, 50%, 0%, -50%);
+                margin-left: 10rem;
+            }
+        }
+
+        .item-2 {
+            @include carousel(95vh, '../../img/banner2.jpg');
+
+            .carousel-content {
+                @include carousel-content(50%, 50%, 0%, -50%);
+                margin-right: 10rem;
+            }
+        }
+
+        .item-3 {
+            @include carousel(95vh, '../../img/banner3.jpg');
+
+            .carousel-content {
+                @include carousel-content(0%, 50%, -0%, -50%);
+                margin-left: 10rem;
+            }
+        }
     }
 }
