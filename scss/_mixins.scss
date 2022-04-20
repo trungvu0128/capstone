@@ -16,15 +16,14 @@
 }
 
 @mixin text($font-size: 1rem, $color:#ddd) {
-    font-size: $font-size;
+    font-size: $font-size !important;
     color: $color;
 }
 
 @mixin carousel($height, $imageUrl) {
-    width: 100%;
     height: $height;
     background-image: url($imageUrl);
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -37,4 +36,12 @@
     left: $p-left;
     transform: translate($tf-X, $tf-Y);
     z-index: 10;
+}
+
+@mixin underline(){
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $main-text-green;
 }
