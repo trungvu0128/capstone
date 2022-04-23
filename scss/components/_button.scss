@@ -17,3 +17,8 @@
     border: 2px solid #ffffff;
 }
 
+.button.button-bg-green{
+    @include button($background-color-green, #ffffff);
+    border: 2px;
+}
+

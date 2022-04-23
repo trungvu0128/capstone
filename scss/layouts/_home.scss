@@ -65,6 +65,10 @@
     }
 }
 
+.title {
+    @include text(1rem, #f53626)
+}
+
 .about-us {
     padding: 5rem 5rem;
     background-color: $background-color-night;
@@ -180,17 +184,104 @@
 }
 
 .stats {
-    padding:4rem;
+    padding: 4rem;
     background-color: $background-color-green;
     @include text(5rem);
+
     .container {
         @include flex-row;
         justify-content: space-around;
         align-items: center;
         text-align: center;
-        h1{
+
+        h1 {
             font-size: 4rem;
         }
     }
+}
 
+.pakage {
+    background-color: $background-color-night-op;
+    .pakage-header {
+        @include flex-column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding : 2rem 0rem;
+        h1{
+            @include text(3rem, $text-color-light);
+        }
+    }
+    .pakage-main {
+        .container {
+            padding: 0rem 10rem;
+
+            .pakage-row {
+                @include flex-row;
+                .pakage-col {
+                    width: calc(100% /3);
+                    align-self: center;
+                    .item {
+                        @include flex-column;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: $background-color-night;
+                        border-radius: 10px;
+                        padding-bottom: 3rem;
+                        @include text;
+                        .item-title {
+                            text-align: center;
+                            padding: 3rem 2rem 2rem 2rem;
+                            h4{
+                                font-size: 3rem;
+                                line-height: 3rem;
+                                color: $main-text-green;
+                                label{
+                                    vertical-align: text-top;
+                                    font-size: 2rem;
+                                }
+                                span{
+                                    @include text(1rem, $text-color-light-bold);
+                                }
+                            }
+                        }
+
+                        .item-content {
+                            @include flex-column;
+                            @include text(1rem, $text-color-light-bold);
+                            justify-content: center;
+                            align-items: center;
+                            padding: 1rem;
+                        }
+                    }
+
+                }
+                .best-choice {
+                    box-shadow: 0 10px 30px 0 rgb(17 17 17 / 9%);
+                    .item{
+                        .item-title {
+                            @include text;
+                            background-color: $background-color-green;
+                            width: 100%;
+                            border-radius: 10px 10px 0px 0px;
+                            padding-top: 5rem;
+                            .save{
+                                @include text(1rem, $main-text-green);
+                                display: inline-block;
+                                border-radius: 5px;
+                                padding: 0.5rem 1rem;
+                                margin-bottom: 1rem;
+                                background-color: $background-color-light;
+                            }
+                            h4{
+                                color: $text-color-light;
+                            }
+                        }
+                    }
+                    
+                }
+
+            }
+        }
+    }
 }

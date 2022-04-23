@@ -69,6 +69,12 @@
   border: 2px solid #ffffff;
 }
 
+.button.button-bg-green {
+  background-color: #189a46;
+  color: #ffffff;
+  border: 2px;
+}
+
 .main-carousel {
   position: relative;
 }
@@ -155,6 +161,11 @@
   width: 100%;
   height: 2px;
   background-color: #189a46;
+}
+
+.title {
+  font-size: 1rem !important;
+  color: #f53626;
 }
 
 .about-us {
@@ -275,4 +286,91 @@
 }
 .stats .container h1 {
   font-size: 4rem;
+}
+
+.pakage {
+  background-color: #222222;
+}
+.pakage .pakage-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0rem;
+}
+.pakage .pakage-header h1 {
+  font-size: 3rem !important;
+  color: #ffffff;
+}
+.pakage .pakage-main .container {
+  padding: 0rem 10rem;
+}
+.pakage .pakage-main .container .pakage-row {
+  display: flex;
+  flex-direction: row;
+}
+.pakage .pakage-main .container .pakage-row .pakage-col {
+  width: 33.3333333333%;
+  align-self: center;
+}
+.pakage .pakage-main .container .pakage-row .pakage-col .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #151515;
+  border-radius: 10px;
+  padding-bottom: 3rem;
+  font-size: 1rem !important;
+  color: #ddd;
+}
+.pakage .pakage-main .container .pakage-row .pakage-col .item .item-title {
+  text-align: center;
+  padding: 3rem 2rem 2rem 2rem;
+}
+.pakage .pakage-main .container .pakage-row .pakage-col .item .item-title h4 {
+  font-size: 3rem;
+  line-height: 3rem;
+  color: #189a46;
+}
+.pakage .pakage-main .container .pakage-row .pakage-col .item .item-title h4 label {
+  vertical-align: text-top;
+  font-size: 2rem;
+}
+.pakage .pakage-main .container .pakage-row .pakage-col .item .item-title h4 span {
+  font-size: 1rem !important;
+  color: #afafaf;
+}
+.pakage .pakage-main .container .pakage-row .pakage-col .item .item-content {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem !important;
+  color: #afafaf;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.pakage .pakage-main .container .pakage-row .best-choice {
+  box-shadow: 0 10px 30px 0 rgba(17, 17, 17, 0.09);
+}
+.pakage .pakage-main .container .pakage-row .best-choice .item .item-title {
+  font-size: 1rem !important;
+  color: #ddd;
+  background-color: #189a46;
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+  padding-top: 5rem;
+}
+.pakage .pakage-main .container .pakage-row .best-choice .item .item-title .save {
+  font-size: 1rem !important;
+  color: #189a46;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  background-color: #ffffff;
+}
+.pakage .pakage-main .container .pakage-row .best-choice .item .item-title h4 {
+  color: #ffffff;
 }/*# sourceMappingURL=style.css.map */
