@@ -13,6 +13,8 @@
 @mixin button($background-color, $color) {
     background-color: $background-color;
     color: $color;
+    margin-top: 2rem;
+    cursor: pointer;
 }
 
 @mixin text($font-size: 1rem, $color:#ddd) {
@@ -38,10 +40,24 @@
     z-index: 10;
 }
 
-@mixin underline(){
+@mixin underline() {
     content: "";
     display: block;
     width: 100%;
     height: 2px;
     background-color: $main-text-green;
+}
+
+@mixin header($color: $text-color-light) {
+    @include flex-column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $text-color-light;
+}
+
+@mixin section($padding, $background-color) {
+    padding: $padding;
+    background-color: $background-color;
+    @include text;
 }

@@ -5,3 +5,20 @@
     font-size:16px;
     font-family: 'Oswald', sans-serif;
 }
+
+p{
+    margin: 0;
+    @include text(1rem, #696969);
+    line-height: 2rem;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header {
+    @include header;
+    padding-bottom: 2rem;
+}
+
