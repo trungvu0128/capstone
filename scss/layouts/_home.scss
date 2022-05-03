@@ -194,11 +194,12 @@
             justify-content: space-around;
             align-items: center;
             text-align: center;
+
             .stats-col {
                 width: calc(100% / 4);
             }
 
-            
+
             h1 {
                 font-size: 4rem;
             }
@@ -420,17 +421,37 @@
 
 
 
-//                                                               Responsive
-@media screen and (max-width:768px) {
-    .top-header {
-        .nav-menu {
-            display: none;
+//
+@media screen and (max-width:1200px) {
+    .pakage {
+        .pakage-main {
+            .container {
+                padding: 0;
+            }
         }
     }
+
+    .about-us {
+        padding: 0;
+
+        .content {
+            padding: 5rem 20%;
+        }
+    }
+
+    .features {
+        padding: 0;
+        .container{
+            padding: 5rem 0rem;
+            margin-bottom: 0;
+        }
+    }
+}
+@media screen and (max-width:992px) {
     .main-carousel {
         .carousel-inner {
             h1 {
-                @include text(2rem);
+                @include text(4rem);
             }
 
             .carousel-group-button {
@@ -476,6 +497,66 @@
 
     .about-us {
         padding: 0;
+
+        .content {
+            padding: 5rem 3rem;
+        }
+    }
+
+    .features {
+        padding: 2rem 0rem;
+        padding-left: 1rem;
+
+        .container {
+            padding: 0;
+
+            .row {
+                flex-wrap: wrap;
+
+                .col-4 {
+                    width: 50%;
+
+                    .item {
+                        .read-more {
+                            width: 35%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .blog {
+        padding: 0;
+    }
+
+    .pakage {
+        .pakage-main {
+            .container {
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .top-header {
+        .nav-menu {
+            display: none;
+        }
+    }
+
+    .main-carousel {
+        .carousel-inner {
+            h1 {
+                @include text(2rem);
+            }
+        }
+    }
+
+    .about-us {
+        padding: 0;
+
         .content {
             padding: 3rem;
         }
@@ -483,14 +564,12 @@
 
     .features {
         .container {
-            padding: 0;
             .row {
-                padding: 0;
-                flex-wrap: wrap;
                 .col-4 {
-                    width: 50%;
-                    .item{
-                        .read-more{
+                    width: calc(100% / 3);
+
+                    .item {
+                        .read-more {
                             width: 35%;
                         }
                     }
@@ -511,22 +590,24 @@
         @include text(5rem);
 
         .container {
-            .stat-row{
+            .stat-row {
                 flex-wrap: wrap;
+
                 .stat-col {
                     width: 50%;
-                    .content{
+
+                    .content {
                         h1 {
                             font-size: 3rem;
                         }
-            
+
                         p {
                             color: $text-color-light;
                         }
                     }
                 }
             }
-            
+
         }
     }
 
@@ -534,33 +615,34 @@
         .pakage-header {
             @include header;
             padding: 2rem 0rem;
-    
+
             h1 {
                 @include text(3rem, $text-color-light);
             }
         }
-    
+
         .pakage-main {
             .container {
                 padding: 0;
-    
+
                 .pakage-row {
                     @include flex-column;
+
                     .pakage-col {
                         width: 100%;
                         margin: 1rem;
                     }
-    
+
                     .best-choice {
                         box-shadow: 0 10px 30px 0 rgb(17 17 17 / 9%);
-    
+
                         .item {
                             .item-title {
                                 background-color: $background-color-green;
                                 width: 100%;
                                 border-radius: 10px 10px 0px 0px;
                                 padding-top: 5rem;
-    
+
                                 .save {
                                     @include text(1rem, $main-text-green);
                                     display: inline-block;
@@ -569,13 +651,13 @@
                                     margin-bottom: 1rem;
                                     background-color: $background-color-light;
                                 }
-    
+
                                 h4 {
                                     color: $text-color-light;
                                 }
                             }
                         }
-    
+
                     }
                 }
             }
@@ -586,13 +668,14 @@
         .container {
             padding: 0;
         }
-        .carousel-indicators{
+
+        .carousel-indicators {
             display: none;
         }
-    
+
         .carousel-row {
             @include flex-column;
-    
+
             .carousel-col {
                 margin: 0rem 1rem 2rem 0rem;
                 width: 100%;
@@ -602,20 +685,22 @@
 
     .stay-updated {
         padding: 0;
-    
+
         .container {
             padding: 5%;
             text-align: center;
         }
-    
+
         .main {
             form {
                 @include flex-row;
+
                 input {
                     width: 70%;
                     margin-right: 20px;
                 }
-                .button{
+
+                .button {
                     width: 30%;
                     margin: 0;
                 }
@@ -623,6 +708,7 @@
         }
     }
 }
+
 @media screen and (max-width:576px) {
 
 
@@ -638,37 +724,41 @@
             }
         }
     }
+
     .feedback {
         .container {
             padding: 0;
         }
-        .carousel-indicators{
+
+        .carousel-indicators {
             display: none;
         }
-    
+
         .carousel-row {
             @include flex-column;
-    
+
             .carousel-col {
                 margin: 0rem 1rem 2rem 0rem;
                 width: 100%;
             }
         }
     }
+
     .stay-updated {
         padding: 0;
-    
+
         .container {
             padding: 5%;
             text-align: center;
         }
-    
+
         .main {
             form {
                 input {
                     width: 100%;
                 }
-                .button{
+
+                .button {
                     width: 100%;
                     margin-top: 0.5rem;
                 }
