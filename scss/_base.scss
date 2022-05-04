@@ -22,3 +22,12 @@ a{
     padding-bottom: 2rem;
 }
 
+.read-more {
+    font-weight: bold;
+    position: relative;
+    width: fit-content;
+    &::after {
+        @include underline;
+    }
+}
+

@@ -1,0 +1,46 @@
+@import '../mixins';
+@import '../variables';
+
+.about-breakcum{
+    @include carousel(40vh, '../../img/banner1.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    &::after {
+        @include overlay;
+    }
+    .content{
+        color: #ffffff;
+        z-index: 2;
+    }
+}
+.about-content{
+    position: relative;
+    align-items: center;
+    @include carousel(60vh, '../../img/banner2.jpg');
+    &::after {
+        @include overlay;
+    }
+    .content{
+        p{
+            color: $text-color-light-op;
+        }
+        h1{
+            color: #ffffff;
+        }
+        position: absolute;
+        left: 50%;
+        top:50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        width: 30%;
+        .history{
+            @include flex-row;
+            margin-top: 1rem;
+        }
+    }
+}
+
+.about-choose-us{}

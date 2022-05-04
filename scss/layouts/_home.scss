@@ -1,7 +1,6 @@
 @import '../mixins';
 @import '../variables';
 
-
 .section {
     @include section(5rem, $background-color-night);
 }
@@ -51,26 +50,12 @@
         }
 
         &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            min-height: 100%;
-            left: 0;
-            right: 0;
-            z-index: 1;
-            background-color: #0c0c0c;
-            opacity: .6;
+            @include overlay;
         }
     }
 }
 
-.read-more {
-    font-weight: bold;
 
-    &::after {
-        @include underline;
-    }
-}
 
 .title {
     @include text(1rem, #f53626)
@@ -104,10 +89,6 @@
                     background-color: $background-color-night;
                     transition: all .5s;
                     border-radius: 1rem;
-
-                    .read-more {
-                        width: 25%;
-                    }
 
                     p {
                         line-height: 2rem;
@@ -446,6 +427,31 @@
             margin-bottom: 0;
         }
     }
+
+    .stay-updated {
+        padding: 0;
+
+        .container {
+            padding: 5%;
+            text-align: center;
+        }
+
+        .main {
+            form {
+                @include flex-row;
+
+                input {
+                    width: 70%;
+                    margin-right: 20px;
+                }
+
+                .button {
+                    width: 30%;
+                    margin: 0;
+                }
+            }
+        }
+    }
 }
 @media screen and (max-width:992px) {
     .main-carousel {
@@ -514,20 +520,19 @@
                 flex-wrap: wrap;
 
                 .col-4 {
-                    width: 50%;
-
-                    .item {
-                        .read-more {
-                            width: 35%;
-                        }
-                    }
+                    width: calc(100% / 3);
                 }
             }
         }
     }
 
     .blog {
-        padding: 0;
+        .container {
+            padding: 1rem;
+            .col-lg-6{
+                margin-bottom: 20px;;
+            }
+        }
     }
 
     .pakage {
@@ -538,8 +543,14 @@
         }
     }
 }
-
 @media screen and (max-width:768px) {
+    .section {
+        @include section(3rem, $background-color-night);
+    }
+    
+    .section-op {
+        @include section(3rem, $background-color-night-op);
+    }
     .top-header {
         .nav-menu {
             display: none;
@@ -566,23 +577,12 @@
         .container {
             .row {
                 .col-4 {
-                    width: calc(100% / 3);
-
-                    .item {
-                        .read-more {
-                            width: 35%;
-                        }
-                    }
+                    width: 50%;
                 }
             }
         }
     }
 
-    .blog {
-        .container {
-            padding: 0;
-        }
-    }
 
     .stats {
         padding: 3rem;
@@ -683,35 +683,8 @@
         }
     }
 
-    .stay-updated {
-        padding: 0;
-
-        .container {
-            padding: 5%;
-            text-align: center;
-        }
-
-        .main {
-            form {
-                @include flex-row;
-
-                input {
-                    width: 70%;
-                    margin-right: 20px;
-                }
-
-                .button {
-                    width: 30%;
-                    margin: 0;
-                }
-            }
-        }
-    }
 }
-
 @media screen and (max-width:576px) {
-
-
     .features {
         .container {
             padding: 0;
@@ -726,6 +699,7 @@
     }
 
     .feedback {
+        padding: 2rem;
         .container {
             padding: 0;
         }
@@ -754,6 +728,7 @@
 
         .main {
             form {
+                display: block;
                 input {
                     width: 100%;
                 }
@@ -766,8 +741,6 @@
         }
     }
 }
-
-
 
 @keyframes ripple {
     0% {
