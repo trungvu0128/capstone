@@ -22,10 +22,19 @@ a{
     padding-bottom: 2rem;
 }
 
+.active{
+    color: $main-text-green;
+}   
+
 .read-more {
     font-weight: bold;
     position: relative;
     width: fit-content;
+    transition: color .5s;
+    cursor: pointer;
+    &:hover{
+        color: $main-text-green;
+    }
     &::after {
         @include underline;
     }

@@ -2,7 +2,6 @@
 @import '../variables';
 .footer {
     background-color: #111111;
-
     .footer-row {
         @include flex-row;
         justify-content: space-around;
@@ -34,6 +33,7 @@
 
 @media screen and (max-width:576px){
     .footer {
+        padding: 0rem 1rem;
         .footer-row {
             @include flex-column;
             gap:2rem;

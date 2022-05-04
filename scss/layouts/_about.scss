@@ -1,46 +1,263 @@
 @import '../mixins';
 @import '../variables';
 
-.about-breakcum{
+
+.container {
+    padding: 0rem 5rem;
+}
+
+.about-breakcum {
     @include carousel(40vh, '../../img/banner1.jpg');
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     position: relative;
+
     &::after {
         @include overlay;
     }
-    .content{
+
+    .content {
+        transform: translateY(50%);
         color: #ffffff;
         z-index: 2;
+
+        span {
+            margin-right: 0.5rem;
+        }
     }
 }
-.about-content{
+
+.about-title{
+    .container{
+        .row{
+            p{
+                margin: 1rem 0rem;
+            }
+        }
+    }
+}
+
+.about-content {
     position: relative;
     align-items: center;
-    @include carousel(60vh, '../../img/banner2.jpg');
+    @include carousel(80vh, '../../img/banner2.jpg');
+
     &::after {
         @include overlay;
     }
-    .content{
-        p{
+
+    .content {
+        p {
             color: $text-color-light-op;
         }
-        h1{
+
+        h1 {
             color: #ffffff;
         }
+
         position: absolute;
         left: 50%;
         top:50%;
         transform: translateY(-50%);
         z-index: 2;
         width: 30%;
-        .history{
+
+        .history {
             @include flex-row;
             margin-top: 1rem;
+            gap: 2rem;
         }
     }
 }
 
-.about-choose-us{}
+.about-choose-us {
+    .container {
+
+        .row {
+            .services-left {
+                text-align: right;
+
+                img {
+                    margin-top: 1rem;
+                    border-radius: 1rem;
+                    width: 100%;
+                }
+            }
+
+            .services-right {
+                .item {
+                    @include flex-column;
+                    justify-content: center;
+                    align-items: center;
+
+                    .choose-us-item {
+                        @include flex-row;
+
+                        span {
+                            font-size: 2.5rem;
+                            width: 2rem;
+                            color: $main-text-green;
+                            margin: 0rem 2rem;
+                            margin-top: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about-ourteam {
+    .main {
+        .container {
+            .item {
+                text-align: center;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    margin-bottom: 1rem;
+                    border-radius: 1rem;
+                    transition: all .5s;
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+
+                    &:hover~h5 {
+                        color: $main-text-green;
+                    }
+                }
+
+                .social {
+                    span {
+                        margin: 1rem;
+                        padding: 0.2rem;
+                        border-radius: 5px;
+                        font-size: 0.8rem;
+                        color: $main-text-green;
+                        transition: all .5s;
+
+                        &:hover {
+                            color: #ffffff;
+                            background: $main-text-green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {}
+
+@media screen and (max-width:992px) {
+    .container {
+        padding: 0;
+    }
+
+    .section {
+        @include section(3rem, $background-color-night);
+    }
+
+    .section-op {
+        @include section(3rem, $background-color-night-op);
+    }
+
+    .about-content {
+        .content {
+            width: 50%;
+            transform: translate(-25%, -50%);
+        }
+    }
+}
+
+@media screen and (max-width:992px) {
+
+    .about-content {
+        .content {
+            width: 80%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .section {
+        @include section(2rem, $background-color-night);
+    }
+
+    .section-op {
+        @include section(2rem, $background-color-night-op);
+    }
+    .about-choose-us{
+        .container{
+            .row{
+                .services-left{
+                    text-align: left;
+                }
+                .services-right{
+                    .item{
+                        .choose-us-item{
+                            margin-top: 2rem;
+                            span{
+                                font-size: 2.5rem;
+                                width: 2rem;
+                                color: $main-text-green;
+                                margin: 0rem 2rem;
+                                margin-top: 0.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .about-ourteam {
+        .main {
+            .container {
+                .item {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:576px) {
+    .section {
+        @include section(1rem, $background-color-night);
+    }
+
+    .section-op {
+        @include section(1rem, $background-color-night-op);
+    }
+    .about-choose-us {
+        .container {
+    
+            .row {    
+                .services-right {
+                    .item {
+
+                        .choose-us-item {
+                            @include flex-column;
+                            @include flex-column;
+                            justify-content: center;
+                            align-items: center;
+                            text-align: center;
+                            span {
+                                font-size: 2.5rem;
+                                width: 2rem;
+                                color: $main-text-green;
+                                margin: 0rem 2rem;
+                                margin-top: 0.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
