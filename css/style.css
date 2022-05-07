@@ -134,14 +134,14 @@
 }
 
 .section {
-  padding: 4rem;
+  padding: 5rem;
   background-color: #151515;
   font-size: 1rem !important;
   color: #ddd;
 }
 
 .section-op {
-  padding: 4rem;
+  padding: 5rem;
   background-color: #222222;
   font-size: 1rem !important;
   color: #ddd;
@@ -1075,6 +1075,10 @@
     margin-top: 0.5rem;
   }
 }
+.main-service .container .row .item img {
+  width: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;

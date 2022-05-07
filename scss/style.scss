@@ -1,7 +1,8 @@
-@import './components/navigation';
+@import './components/_navigation';
 @import './components/_footer';
 @import './components/_header';
 @import './components/_button';
-@import './layouts/home';
-@import './layouts/about';
+@import './layouts/_home';
+@import './layouts/_about';
+@import './layouts/_service';
 @import '_base';
