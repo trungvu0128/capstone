@@ -1,0 +1,37 @@
+$c1: #189A46;
+$c1-100: #004c00;
+$c2-100:#ffffff;
+$c2-200:#dddddd;
+$c2-300:#e6ebff;
+$c2-350:#faf7fe;
+$c2-400:#858891;
+$c2-500:#696969;
+$c2-600:#8f94a8;
+$c2-700:#0D1326;
+$c2-800:#111111;
+$c2-900:#000000;
+$c2-950:#000C04;
+$c3-100:#f53626;
+$c3-200: #de3223;
+
+$text-xxs:0.5rem;
+$text-xs: 0.75rem;
+$text-sm: 0.8rem;
+$text-base: 1rem;
+$text-mdd: 1.15rem;
+$text-md: 1.25rem;
+$text-lg: 1.5rem;
+$text-xl: 2rem;
+$text-2xl: 3rem;
+$text-3xl: 4rem;
+
+$font-light: 300;
+$font-normal: 400;
+$font-semibold: 600;
+$font-bold: 700;
+
+@mixin text($fs: $text-base, $fw: $font-normal, $c: $c1) {
+    font-size: $fs;
+    font-weight: $fw;
+    color: $c;
+}
