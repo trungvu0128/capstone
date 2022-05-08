@@ -9,9 +9,19 @@
     @include section(4rem, $background-color-night-op);
 }
 
+.carousel-indicators{
+    button{
+        width: 15px !important;
+        height: 15px !important;
+        border-radius: 50% !important;
+    }
+    .active{
+        background-color: $main-text-green;
+    }
+}
+
 .main-carousel {
     position: relative;
-
     .carousel-inner {
         h1 {
             @include main-text(5rem);
@@ -53,6 +63,7 @@
             @include overlay;
         }
     }
+
 }
 
 .title {
@@ -284,6 +295,12 @@
 }
 
 .about {
+    .modal{
+        .modal-dialog{
+            min-width: 576px;
+            max-width: 50%;
+        }
+    }
     .container {
         @include header;
         gap: 1rem;
@@ -324,6 +341,9 @@
             }
         }
     }
+}
+.modal-backdrop.show {
+    opacity: .9;
 }
 
 .feedback {

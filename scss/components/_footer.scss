@@ -1,5 +1,6 @@
 @import '../bases/mixins';
 @import '../bases/variables';
+
 .footer {
     background-color: #111111;
     .footer-row {
@@ -28,6 +29,22 @@
         border-top: 1px solid rgba(103, 99, 99, 0.14);
         padding: 2rem 0rem;
         text-align: center;
+    }
+}
+
+@media screen and (max-width:768px){
+    .footer {
+        padding: 0rem 1rem;
+        .footer-row {
+            @include flex-row;
+            gap:2rem;
+            .footer-col{
+                width: 50%;
+            }
+        }
+        .end-footer {
+            padding: 1rem 0rem;
+        }
     }
 }
 
