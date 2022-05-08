@@ -1,0 +1,76 @@
+@import './_variables';
+
+@mixin flex-column() {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row() {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin button($background-color, $color) {
+    background-color: $background-color;
+    color: $color;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+@mixin text($font-size: 1rem, $color:#ddd) {
+    font-size: $font-size !important;
+    color: $color;
+}
+
+@mixin carousel($height, $imageUrl) {
+    height: $height;
+    background-image: url($imageUrl);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin carousel-content($p-left, $p-top, $tf-X, $tf-Y) {
+    @include text;
+    position: absolute;
+    width: 40%;
+    top: $p-top;
+    left: $p-left;
+    transform: translate($tf-X, $tf-Y);
+    z-index: 10;
+}
+
+@mixin underline() {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $main-text-green;
+}
+
+@mixin header($color: $text-color-light) {
+    @include flex-column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $text-color-light;
+}
+
+@mixin section($padding, $background-color) {
+    padding: $padding;
+    background-color: $background-color;
+    @include text;
+}
+
+@mixin overlay{
+    content: "";
+        position: absolute;
+        top: 0;
+        height: 100%;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        background-color: #0c0c0c;
+        opacity: .6;
+}

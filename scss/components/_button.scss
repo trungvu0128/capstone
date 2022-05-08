@@ -1,0 +1,24 @@
+@import '../mixins';
+@import '../variables';
+
+.button{
+    width: 10rem;
+    padding:1rem;
+    border-radius: 10px;
+}
+
+.button.button-bg-white{
+    @include button(#ffffff, $main-text-green);
+    border: 2px solid transparent;
+}
+
+.button.button-bg-trans{
+    @include button(transparent, #ffffff);
+    border: 2px solid #ffffff;
+}
+
+.button.button-bg-green{
+    @include button($background-color-green, #ffffff);
+    border: 2px;
+}
+

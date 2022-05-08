@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-size:16px;
+    font-family: 'Oswald', sans-serif;
+}
+
+p{
+    margin: 0;
+    @include text(1rem, #696969);
+    line-height: 2rem;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header {
+    @include header;
+    padding-bottom: 2rem;
+}
+
+.active{
+    color: $main-text-green;
+}   
+
+.read-more {
+    font-weight: bold;
+    position: relative;
+    width: fit-content;
+    transition: color .5s;
+    cursor: pointer;
+    &:hover{
+        color: $main-text-green;
+    }
+    &::after {
+        @include underline;
+    }
+}
+
