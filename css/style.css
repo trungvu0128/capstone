@@ -103,6 +103,7 @@
 .top-header label {
   display: none;
   position: absolute;
+  cursor: pointer;
   right: 0;
   margin-right: 1.5rem;
   font-size: 1.5rem;
