@@ -2,11 +2,11 @@
 @import '../variables';
 
 .section {
-    @include section(4rem, $background-color-night);
+    @include section(5rem, $background-color-night);
 }
 
 .section-op {
-    @include section(4rem, $background-color-night-op);
+    @include section(5rem, $background-color-night-op);
 }
 
 .main-carousel {

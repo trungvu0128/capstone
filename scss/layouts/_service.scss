@@ -1,0 +1,14 @@
+@import '../mixins';
+@import '../variables';
+
+.main-service{
+    .container{
+        .row{
+            .item{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
