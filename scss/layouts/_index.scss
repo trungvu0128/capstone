@@ -1,12 +1,12 @@
-@import '../mixins';
-@import '../variables';
+@import '../bases/mixins';
+@import '../bases/variables';
 
 .section {
-    @include section(5rem, $background-color-night);
+    @include section(4rem, $background-color-night);
 }
 
 .section-op {
-    @include section(5rem, $background-color-night-op);
+    @include section(4rem, $background-color-night-op);
 }
 
 .main-carousel {
@@ -14,7 +14,7 @@
 
     .carousel-inner {
         h1 {
-            @include text(5rem);
+            @include main-text(5rem);
         }
 
         p {
@@ -55,10 +55,8 @@
     }
 }
 
-
-
 .title {
-    @include text(1rem, #f53626)
+    @include main-text(1rem, #f53626)
 }
 
 .about-us {
@@ -67,7 +65,7 @@
         padding: 0% 30%;
 
         .title {
-            @include text(1rem, #f53626)
+            @include main-text(1rem, #f53626)
         }
     }
 }
@@ -109,7 +107,7 @@
 }
 
 .blog {
-    @include text;
+    @include main-text;
 
     .container {
         padding: 5rem 5rem;
@@ -123,7 +121,7 @@
                     height: 100%;
 
                     span {
-                        @include text(1rem, #f53626)
+                        @include main-text(1rem, #f53626)
                     }
 
                     img {
@@ -136,7 +134,7 @@
                         gap: 1rem;
 
                         .verify-item {
-                            @include text;
+                            @include main-text;
                             @include flex-row;
                             align-items: center;
                             gap: 10px;
@@ -167,7 +165,7 @@
 .stats {
     padding: 3rem;
     background-color: $background-color-green;
-    @include text(5rem);
+    @include main-text(5rem);
 
     .container {
         .stat-row {
@@ -198,7 +196,7 @@
         padding: 2rem 0rem;
 
         h1 {
-            @include text(3rem, $text-color-light);
+            @include main-text(3rem, $text-color-light);
         }
     }
 
@@ -220,7 +218,7 @@
                         background-color: $background-color-night;
                         border-radius: 10px;
                         padding-bottom: 2rem;
-                        @include text;
+                        @include main-text;
 
                         .item-title {
                             text-align: center;
@@ -237,14 +235,14 @@
                                 }
 
                                 span {
-                                    @include text(1rem, $text-color-light-bold);
+                                    @include main-text(1rem, $text-color-light-bold);
                                 }
                             }
                         }
 
                         .item-content {
                             @include flex-column;
-                            @include text(1rem, $text-color-light-bold);
+                            @include main-text(1rem, $text-color-light-bold);
                             justify-content: center;
                             align-items: center;
                             padding: 1rem;
@@ -264,7 +262,7 @@
                             padding-top: 5rem;
 
                             .save {
-                                @include text(1rem, $main-text-green);
+                                @include main-text(1rem, $main-text-green);
                                 display: inline-block;
                                 border-radius: 5px;
                                 padding: 0.5rem 1rem;
@@ -292,7 +290,7 @@
         padding: 0% 10%;
 
         p {
-            @include text(1rem, $text-color-light-bold);
+            @include main-text(1rem, $text-color-light-bold);
         }
     }
 
@@ -314,7 +312,7 @@
                 cursor: pointer;
 
                 i {
-                    @include text(1rem, $main-text-green);
+                    @include main-text(1rem, $main-text-green);
                     transform: translateY(70%);
                 }
             }
@@ -455,7 +453,7 @@
     .main-carousel {
         .carousel-inner {
             h1 {
-                @include text(4rem);
+                @include main-text(4rem);
             }
 
             .carousel-group-button {
@@ -558,7 +556,7 @@
     .main-carousel {
         .carousel-inner {
             h1 {
-                @include text(2rem);
+                @include main-text(2rem);
             }
         }
     }
@@ -585,7 +583,7 @@
     .stats {
         padding: 3rem;
         background-color: $background-color-green;
-        @include text(5rem);
+        @include main-text(5rem);
 
         .container {
             .stat-row {
@@ -615,7 +613,7 @@
             padding: 2rem 0rem;
 
             h1 {
-                @include text(3rem, $text-color-light);
+                @include main-text(3rem, $text-color-light);
             }
         }
 
@@ -642,7 +640,7 @@
                                 padding-top: 5rem;
 
                                 .save {
-                                    @include text(1rem, $main-text-green);
+                                    @include main-text(1rem, $main-text-green);
                                     display: inline-block;
                                     border-radius: 5px;
                                     padding: 0.5rem 1rem;

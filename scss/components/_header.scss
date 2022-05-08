@@ -1,5 +1,5 @@
-@import '../mixins';
-@import '../variables';
+@import '../bases/mixins';
+@import '../bases/variables';
 .top-header{
     @include flex-row;
     justify-content: space-around;
@@ -18,7 +18,7 @@
     .nav-menu{
         @include flex-row;
         a{
-            @include text;
+            @include main-text;
             text-decoration: none;
             margin-right: 1rem;
             &::after{
@@ -31,13 +31,12 @@
             &:hover::after{
                 width:100%;
                 background: $main-text-green;
-                @include text(1rem, $main-text-green)
+                @include main-text(1rem, $main-text-green)
             }
             
         }
     }
 }
-
 @media screen and (max-width:576px){
     
 }

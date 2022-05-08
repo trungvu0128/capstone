@@ -1,0 +1,185 @@
+@import "../bases/variables";
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 70px;
+}
+.gallery{
+    text-align: center;
+    .header1 p{
+        font-size: $text-lg;
+        color: $text-color-light;
+        padding-top: 3rem;
+        h1{
+            color: $text-color-light;
+            font-weight: $font-bold;
+        }
+    }
+    .main{
+        width: 100%;
+        padding: 0 4.375rem;
+        margin-top: 3rem;
+        margin-left: auto;
+        margin-right: auto;
+        .list{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -1rem;
+            .item{
+                width: calc(100% / 3);
+                overflow: hidden;
+                position : relative; 
+                padding: 0 0.9rem;
+                margin-bottom: 1.8rem;
+                &::after{
+                    content: "";
+                    height: 100%;
+                    width: 10px ;
+                    background:  rgba(255, 255, 255, 0.3);
+                    position: absolute; 
+                    top: 0;
+                    left: -50px;
+                    transform : skew(-45deg);
+                    opacity : 0;
+                    transition : all .4s;
+                     }
+                &:hover::after{
+                    left: 150% !important ;
+                    opacity : 1 !important; 
+                    }
+                img{
+                    display: block;
+                    width: 100%;
+                    border-radius: 0.6rem;
+                    cursor: pointer;
+                }
+            }
+                 
+        }
+
+    }
+}
+.footer{
+    width: 100%;
+    background-color: $c2-800;
+    height: 26rem;
+    align-items: center;
+    padding-top: 4.5rem;
+    .container{
+        display: flex;
+        flex-wrap: nowrap;
+        height: 12rem;
+        .item{
+            width: 50%;
+            h7{
+                color: $c2-500;
+            }
+        }
+        .infoLeft{
+            display: flex;
+            flex-wrap: wrap;
+            .itemLeft{
+                width: calc(100% / 3);
+                a{
+                   line-height: 2rem;
+                   text-decoration: none;
+                   color: $c2-500;
+                   &:hover{
+                    text-decoration: underline;
+                    color: $c2-100;
+                    }
+                }
+                
+            }
+        }
+        .infoRight{
+            span{
+                line-height: 2rem;
+                color: $c2-500;
+                font-weight: $font-semibold;
+            }
+            a{
+                text-decoration: none;
+                color: $c2-500;
+                &:hover{
+                    text-decoration: underline;
+                    color: $c2-100;
+                }
+            }
+            .icon{
+                margin-top: 1rem;
+                a{
+                    font-size: $text-sm;
+                    margin-right: 1rem;
+                }
+
+            }
+        }
+    }
+    .text{
+        height:4.8rem;
+        padding-top: 5rem;
+        display: flex;
+        justify-content: center;
+        bottom: 50%;
+        background-color: $c2-800;
+       // margin: 1rem 0;
+        color: $c2-500;
+        border-bottom: 1px solid $c2-500;
+        a{
+            color: $c3-200;
+            margin-left: 5px;
+            text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1280px){
+    .gallery{
+        .main{
+            max-width: 1280px;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .gallery{
+        .main{
+            .list{
+                .item{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 576px) {
+    .bg-img{
+        .containerImg{
+            .detail{
+                h1{
+                    font-size: $text-xl;
+                }
+            }
+        }
+        }
+    .gallery{
+        .header1{
+            p{
+                font-size: $text-md;
+            }
+        }
+        .main{
+            padding: 0 1rem;
+            .list{
+                .item{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,5 +1,5 @@
-@import '../mixins';
-@import '../variables';
+@import '../bases/mixins';
+@import '../bases/variables';
 
 
 .container {
@@ -7,7 +7,7 @@
 }
 
 .about-breakcum {
-    @include carousel(40vh, '../../img/banner1.jpg');
+    @include carousel(30vh, '../../img/banner1.jpg');
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,14 +1,14 @@
+@import './variables';
 *{
+    font-family: 'Jost', sans-serif;
     margin: 0;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
-    font-size:16px;
-    font-family: 'Oswald', sans-serif;
 }
 
 p{
     margin: 0;
-    @include text(1rem, #696969);
+    @include main-text(1rem, #696969);
     line-height: 2rem;
 }
 

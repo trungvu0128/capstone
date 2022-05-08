@@ -1,5 +1,5 @@
-@import '../mixins';
-@import '../variables';
+@import '../bases/mixins';
+@import '../bases/variables';
 
 .nav-right{
     position: fixed;
@@ -15,7 +15,6 @@
     justify-content: space-around;
     align-items: center;
     .nav-item{
-        @include flex-column;
         @include flex-column;
         justify-content: space-around;
         align-items: center;

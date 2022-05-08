@@ -17,7 +17,7 @@
     cursor: pointer;
 }
 
-@mixin text($font-size: 1rem, $color:#ddd) {
+@mixin main-text($font-size: 1rem, $color:#ddd) {
     font-size: $font-size !important;
     color: $color;
 }
@@ -31,7 +31,7 @@
 }
 
 @mixin carousel-content($p-left, $p-top, $tf-X, $tf-Y) {
-    @include text;
+    @include main-text;
     position: absolute;
     width: 40%;
     top: $p-top;
@@ -60,7 +60,7 @@
 @mixin section($padding, $background-color) {
     padding: $padding;
     background-color: $background-color;
-    @include text;
+    @include main-text;
 }
 
 @mixin overlay{
