@@ -4,9 +4,55 @@
 .main-service{
     .container{
         .row{
-            .item{
-                img{
+            .service-col{
+                margin: 2rem;
+                .item{
+                    @include flex-row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 2rem;
+                    img{
+                        width: 50%;
+                        border-radius: 1rem;
+                    }
+                    .content{
+                        p{
+                            margin: 1rem 0rem;
+                        }
+                    }
+                }
+                .reverse{
+                    flex-direction: row-reverse;
+                }
+                &::after{
+                    content: "";
+                    display: block;
                     width: 100%;
+                    height: 0.5px;
+                    background: $text-color-light-bold;
+                    margin-top: 4rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px){
+    .main-service{
+        .container{
+            .row{
+                .service-col{
+                    margin: 0;
+                    margin-top: 2rem;
+                    .item{
+                        @include flex-column;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .reverse{
+                        flex-direction: column;
+                    }
                 }
             }
         }

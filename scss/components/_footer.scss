@@ -37,6 +37,8 @@
         padding: 0rem 1rem;
         .footer-row {
             @include flex-row;
+            justify-content: flex-start;
+            flex-wrap: wrap;
             gap:2rem;
             .footer-col{
                 width: 50%;
