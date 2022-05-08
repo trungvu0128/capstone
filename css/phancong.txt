@@ -9,3 +9,5 @@ Layouts
     + blog
     + contact
     + gallery
+
+Demo: https://capstone-blush.vercel.app
